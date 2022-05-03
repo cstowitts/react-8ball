@@ -1,5 +1,16 @@
 import { useState } from "react";
 
+/** EightBall component
+ * 
+ * props:
+ *  answers: [{msg: "yes", color: "green"}, ...]
+ * state:
+ *  answer: {msg: "yes", color: "green"}
+ *  count: object counting the frequency of answer colors
+ *      {green: 1, red: 2, ...}
+ * 
+ * App -> EightBall
+ */
 
 function EightBall({answers}){
     //gotta destructure or access as props.answers!
