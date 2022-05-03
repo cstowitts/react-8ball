@@ -1,0 +1,10 @@
+.Boxes .boxes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Boxes .Button {
+    width: 150px;
+    height: 50px;
+}
