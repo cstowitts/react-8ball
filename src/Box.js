@@ -18,7 +18,7 @@ function Box({color}) {
   };
 
   return (
-    <div className="Box" style={style}></div>
+    <div className="Box" style={style} role="box"></div>
   )
 }
 

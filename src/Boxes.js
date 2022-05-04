@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Box from "./Box";
 import "./Boxes.css";
-import Button from "./Button"
+import Button from "./Button";
+import { randomRGB } from "./libs";
 
 /** Boxes component
  * 
@@ -15,13 +16,6 @@ import Button from "./Button"
 
 function Boxes() {
   
-  function randomRGB(){
-    const r = Math.floor(Math.random()*256);
-    const g = Math.floor(Math.random()*256);
-    const b = Math.floor(Math.random()*256);
-    return `RGB(${r}, ${g}, ${b})`;
-  } 
-
   function changeRandomBoxColor(){
     const randomBoxIdx = Math.floor(Math.random() * boxColors.length);
 
@@ -35,7 +29,7 @@ function Boxes() {
   const [boxColors, setBoxColors] = useState(initialBoxColors);
 
   return (
-    <div className="Boxes">
+    <div className="Boxes" role="boxes">
       <div className="boxes-container">
       {
         boxColors.map((color, idx) => <Box key={idx} color={color} className="Box"/>)
